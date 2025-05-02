@@ -13,7 +13,7 @@ body {
   position: relative;
   max-width: 600px;
   line-height: 1.5;
-  margin: 0 auto; /* Center the content */
+  margin: 0 auto;
 }
 
 .calculator-title {
@@ -73,6 +73,10 @@ input[type="range"] {
   outline: none;
 }
 
+input[type="range"]:focus {
+  outline: 3px solid green;
+}
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -83,6 +87,8 @@ input[type="range"]::-webkit-slider-thumb {
   outline: 3px solid var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -127,7 +133,7 @@ input[type="range"]:focus::-ms-thumb {
 .output {
   display: block;
   font-size: 1rem;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   background-color: var(--primary-color);
   border-radius: 5px;
   text-align: center;

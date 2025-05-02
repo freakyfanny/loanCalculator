@@ -32,6 +32,7 @@ const RangeSliderWithText = ({ id, label, min, max, step, value, onChange, unit 
           aria-valuemax={max}
           aria-valuenow={value}
           aria-orientation="horizontal"
+          aria-live="polite"  
         />
         <p
           className="thumb-label"
@@ -40,18 +41,19 @@ const RangeSliderWithText = ({ id, label, min, max, step, value, onChange, unit 
             left: `${percent}%`,
             transform: "translateX(calc(-50% - 10vw)) translateY(-50%)"
           }}
-          aria-hidden="true"
+          aria-live="polite"  
         >
           {value} {unit}
         </p>
 
-        {percent < 90 && (<p
+        {percent < 90 && (
+          <p
             className="max-label"
-            aria-hidden="true"
+            aria-live="polite" 
           >
             {max} {unit}
           </p>
-         )} 
+        )}
       </div>
     </div>
   );
