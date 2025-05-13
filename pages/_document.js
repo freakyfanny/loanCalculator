@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-
 class MyDocument extends Document {
   render() {
     return (
@@ -23,8 +22,8 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
-          <Main /> {/* Main content */}
-          <NextScript /> {/* Next.js scripts */}
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
