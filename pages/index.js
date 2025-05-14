@@ -1,11 +1,9 @@
-import LoanCalculator from "../components/LoanCalculator";
-import Head from "next/head";
-
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
         <title>Lånekalkylator</title>
+        <meta name="description" content="Beräkna ditt lån snabbt och enkelt med vår lånekalkylator." />
       </Head>
       <main>
         <h1>Välkommen till lånekalkylator</h1>
@@ -13,4 +11,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
